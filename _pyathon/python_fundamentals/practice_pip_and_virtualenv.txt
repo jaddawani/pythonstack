@@ -1,0 +1,14 @@
+pip list : its a list of packages and versions
+
+deactivate: This will deactivate your virtual environment and the pip list should be less.
+
+pip install Django==2.2.4 (install the django package )
+
+pip freeze : pip freeze is a command that allows you to see what modules you have 
+installed with the pip install command to this point. and create a file on asigned location  and put the packeges list inside.
+
+pip uninstall Django : uninstall the package.
+
+ 
+
+pip show Django : shows what django current situation if its installed or not.
