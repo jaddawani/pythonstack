@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Welcome to the Great Number Game!</h1>
+    <p>iam thinking of a number between 1 and 100</p>
+    <p>Take a guess!</p>
+
+
+
+    {% if num1 == 1  %}
+
+     <p style="background-color: red;  border: 1 solid black ;"> too low! </p>
+     {% endif %}
+
+
+     
+     {% if num1 == 2  %}
+     <p style="background-color: rgb(255, 123, 0);  border: 1 solid black ;"> too high! </p>
+     {% endif %}
+     {% if num1 == 3  %}
+     <p style="background-color: blue;  border: 1 solid black ;"> correct! </p>
+     {% endif %}
+
+
+
+    <form action="result" method="POST">
+        {% csrf_token %}
+
+        
+       <input type="number" name="guess">
+       <button>Submit</button>
+
+
+    </form>
+
+</body>
+</html>
