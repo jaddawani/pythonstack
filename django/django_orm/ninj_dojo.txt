@@ -1,0 +1,310 @@
+Microsoft Windows [Version 10.0.19041.985]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django>call djangoPy3Env/scripts/activate
+(djangoPy3Env) C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django>django_orm
+'django_orm' is not recognized as an internal or external command,
+operable program or batch file.
+
+(djangoPy3Env) C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django>cd django_orm
+
+(djangoPy3Env) C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django\django_orm>django-admin startproject ninja_dojo
+
+(djangoPy3Env) C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django\django_orm>python manage.py runserver
+python: can't open file 'manage.py': [Errno 2] No such file or directory
+
+(djangoPy3Env) C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django\django_orm>cd ninja_dojo
+
+(djangoPy3Env) C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django\django_orm\ninja_dojo>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+May 22, 2021 - 22:40:38
+Django version 2.2.4, using settings 'ninja_dojo.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+(djangoPy3Env) C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django\django_orm\ninja_dojo>python manage.py startapp dojo_app
+
+(djangoPy3Env) C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django\django_orm\ninja_dojo>code .
+
+(djangoPy3Env) C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django\django_orm\ninja_dojo>python manage.py makemigration
+Unknown command: 'makemigration'. Did you mean makemigrations?
+Type 'manage.py help' for usage.
+
+(djangoPy3Env) C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django\django_orm\ninja_dojo>y
+'y' is not recognized as an internal or external command,
+operable program or batch file.
+
+(djangoPy3Env) C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django\django_orm\ninja_dojo>python manage.py makemigrations
+No changes detected
+
+(djangoPy3Env) C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django\django_orm\ninja_dojo>python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying sessions.0001_initial... OK
+
+(djangoPy3Env) C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django\django_orm\ninja_dojo>python manage.py shell
+Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>>
+KeyboardInterrupt
+>>>
+KeyboardInterrupt
+>>>
+KeyboardInterrupt
+>>> exit ()
+
+(djangoPy3Env) C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django\django_orm\ninja_dojo>python manage.py makemigrations
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django\djangoPy3Env\lib\site-packages\django\core\management\__init__.py", line 381, in execute_from_command_line
+    utility.execute()
+  File "C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django\djangoPy3Env\lib\site-packages\django\core\management\__init__.py", line 357, in execute
+    django.setup()
+  File "C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django\djangoPy3Env\lib\site-packages\django\__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django\djangoPy3Env\lib\site-packages\django\apps\registry.py", line 114, in populate
+    app_config.import_models()
+  File "C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django\djangoPy3Env\lib\site-packages\django\apps\config.py", line 211, in import_models
+    self.models_module = import_module(models_module_name)
+  File "C:\Users\Mr Dawani\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django\django_orm\ninja_dojo\dojo_app\models.py", line 4, in <module>
+    class Ninja(models.Model):
+  File "C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django\django_orm\ninja_dojo\dojo_app\models.py", line 5, in Ninja
+    dojo = models.ForeignKey(Dojo, related_name="Dojo", on_delete = models.CASCADE)
+NameError: name 'Dojo' is not defined
+
+(djangoPy3Env) C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django\django_orm\ninja_dojo>python manage.py makemigrations
+Migrations for 'dojo_app':
+  dojo_app\migrations\0001_initial.py
+    - Create model Dojo
+    - Create model Ninja
+
+(djangoPy3Env) C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django\django_orm\ninja_dojo>python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, dojo_app, sessions
+Running migrations:
+  Applying dojo_app.0001_initial... OK
+
+(djangoPy3Env) C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django\django_orm\ninja_dojo>python manage.py shell
+Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from dojo_app.models import *
+>>> Dojo.abjects.create(name= "jad", city="ramallah", state="westbank")
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: type object 'Dojo' has no attribute 'abjects'
+>>> >>> Dojo.objects.create(name= "jad", city="ramallah", state="westbank")
+  File "<console>", line 1
+    >>> Dojo.objects.create(name= "jad", city="ramallah", state="westbank")
+     ^
+SyntaxError: invalid syntax
+>>>  Dojo.objects.create(name= "jad", city="ramallah", state="westbank")
+  File "<console>", line 1
+    Dojo.objects.create(name= "jad", city="ramallah", state="westbank")
+    ^
+IndentationError: unexpected indent
+>>> Dojo.objects.create(name= "jad", city="ramallah", state="westbank")
+<Dojo: Dojo object (1)>
+>>> Dojo.objects.create(name="lana", city="ramallah", state="westbank")
+<Dojo: Dojo object (2)>
+>>> Dojo.objects.create(name="ghazal", city="ramallah", state="westbank")
+<Dojo: Dojo object (3)>
+>>> Dojo.objects.delete
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'Manager' object has no attribute 'delete'
+>>> Dojo.objects.remove(1)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'Manager' object has no attribute 'remove'
+>>> dojo1 = Dojo.objects.get(id=1)
+>>> dojo2 = Dojo.objects.get(id=2)
+>>> dojo3 = Dojo.objects.get(id=3)
+>>> dojo1.delete()
+(1, {'dojo_app.Ninja': 0, 'dojo_app.Dojo': 1})
+>>> dojo2 = Dojo.delete()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+TypeError: delete() missing 1 required positional argument: 'self'
+>>> dojo2.delete()
+(1, {'dojo_app.Ninja': 0, 'dojo_app.Dojo': 1})
+>>> dojo3.delete()
+(1, {'dojo_app.Ninja': 0, 'dojo_app.Dojo': 1})
+>>> Dojo.objects.create(name= "jad", city="ramallah", state="westbank")
+<Dojo: Dojo object (4)>
+>>> Dojo.objects.create(name="lana", city="ramallah", state="westbank")
+<Dojo: Dojo object (5)>
+>>> Dojo.objects.create(name="ghazal", city="ramallah", state="westbank")
+<Dojo: Dojo object (6)>
+>>> dojo4 = Dojo.objects.get(id=4)
+>>> dojo5 = Dojo.objects.get(id=5)
+>>> dojo6 = Dojo.objects.get(id=6)
+>>> Ninja.objescts.create(first_name="jad" , last_name="dawaani", dojo=dojo4)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: type object 'Ninja' has no attribute 'objescts'
+>>> Ninja.objects.create(first_name="jad" , last_name="dawaani", dojo=dojo4)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django\djangoPy3Env\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django\djangoPy3Env\lib\site-packages\django\db\models\query.py", line 420, in create
+    obj = self.model(**kwargs)
+  File "C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django\djangoPy3Env\lib\site-packages\django\db\models\base.py", line 501, in __init__
+    raise TypeError("%s() got an unexpected keyword argument '%s'" % (cls.__name__, kwarg))
+TypeError: Ninja() got an unexpected keyword argument 'first_name'
+>>> Ninja.objects.create(first_name="jad" , last_name="dawani", dojo=dojo4)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django\djangoPy3Env\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django\djangoPy3Env\lib\site-packages\django\db\models\query.py", line 420, in create
+    obj = self.model(**kwargs)
+  File "C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django\djangoPy3Env\lib\site-packages\django\db\models\base.py", line 501, in __init__
+    raise TypeError("%s() got an unexpected keyword argument '%s'" % (cls.__name__, kwarg))
+TypeError: Ninja() got an unexpected keyword argument 'first_name'
+>>>
+KeyboardInterrupt
+>>> exit()
+
+(djangoPy3Env) C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django\django_orm\ninja_dojo>python manage.py makemigrations
+Did you rename ninja.name to ninja.first_name (a CharField)? [y/N] y
+You are trying to add a non-nullable field 'last_name' to ninja without a default; we can't do that (the database needs something to populate existing rows).
+Please select a fix:
+ 1) Provide a one-off default now (will be set on all existing rows with a null value for this column)
+ 2) Quit, and let me add a default in models.py
+Select an option: 1
+Please enter the default value now, as valid Python
+The datetime and django.utils.timezone modules are available, so you can do e.g. timezone.now
+Type 'exit' to exit this prompt
+>>> exit()
+
+(djangoPy3Env) C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django\django_orm\ninja_dojo>python manage.py makemigrations
+Did you rename ninja.name to ninja.first_name (a CharField)? [y/N] y
+You are trying to add a non-nullable field 'last_name' to ninja without a default; we can't do that (the database needs something to populate existing rows).
+Please select a fix:
+ 1) Provide a one-off default now (will be set on all existing rows with a null value for this column)
+ 2) Quit, and let me add a default in models.py
+Select an option: 2
+
+(djangoPy3Env) C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django\django_orm\ninja_dojo>python manage.py makemigrations
+SystemCheckError: System check identified some issues:
+
+ERRORS:
+dojo_app.Ninja.first_name: (fields.E120) CharFields must define a 'max_length' attribute.
+
+(djangoPy3Env) C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django\django_orm\ninja_dojo>python manage.py makemigrations
+Did you rename ninja.name to ninja.last_name (a CharField)? [y/N] y
+Migrations for 'dojo_app':
+  dojo_app\migrations\0002_auto_20210522_2341.py
+    - Rename field name on ninja to last_name
+    - Add field first_name to ninja
+
+(djangoPy3Env) C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django\django_orm\ninja_dojo>python manage.py makemigrations
+Migrations for 'dojo_app':
+  dojo_app\migrations\0003_auto_20210522_2342.py
+    - Alter field last_name on ninja
+
+(djangoPy3Env) C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django\django_orm\ninja_dojo>python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, dojo_app, sessions
+Running migrations:
+  Applying dojo_app.0002_auto_20210522_2341... OK
+  Applying dojo_app.0003_auto_20210522_2342... OK
+
+(djangoPy3Env) C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django\django_orm\ninja_dojo>python manage.py shell
+Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from dojo_app import*
+>>> dojo4 = Dojo.objects.get(id=4)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'Dojo' is not defined
+>>> from dojo_app.models import*
+>>> dojo4 = Dojo.objects.get(id=4)
+>>> dojo5 = Dojo.objects.get(id=5)
+>>> dojo6 = Dojo.objects.get(id=6)
+>>> Ninja.objects.create(first_name="jad", last_name="dawani", dojo=dojo4)
+<Ninja: Ninja object (1)>
+>>> Ninja.objects.create(first_name="lana", last_name="theodory", dojo=dojo4)
+<Ninja: Ninja object (2)>
+>>> Ninja.objects.create(first_name="ghazal", last_name="salameh", dojo=dojo4)
+<Ninja: Ninja object (3)>
+>>> Ninja.objects.create(first_name="jad", last_name="dawanix", dojo=dojo5)
+<Ninja: Ninja object (4)>
+>>> Ninja.objects.create(first_name="lana", last_name="dawanix", dojo=dojo5)
+<Ninja: Ninja object (5)>
+>>> Ninja.objects.create(first_name="ghazal", last_name="dawanix", dojo=dojo5)
+<Ninja: Ninja object (6)>
+>>> Ninja.objects.create(first_name="jad", last_name="dawanix", dojo=dojo6)
+<Ninja: Ninja object (7)>
+>>> Ninja.objects.create(first_name="lana", last_name="dawanix", dojo=dojo6)
+<Ninja: Ninja object (8)>
+>>> Ninja.objects.create(first_name="ghazal", last_name="dawanix", dojo=dojo6)
+<Ninja: Ninja object (9)>
+>>> dojo4.objects.all().values()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "C:\Users\Mr Dawani\Desktop\python_stack\pythonstack\django\djangoPy3Env\lib\site-packages\django\db\models\manager.py", line 176, in __get__
+    raise AttributeError("Manager isn't accessible via %s instances" % cls.__name__)
+AttributeError: Manager isn't accessible via Dojo instances
+>>> Ninja.dojo4.all().values()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: type object 'Ninja' has no attribute 'dojo4'
+>>> books = Ninja.objects.filter(dojo=Dojo.objects.get(id=4)
+... print(books)
+  File "<console>", line 2
+    print(books)
+        ^
+SyntaxError: invalid syntax
+>>> print(books)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'books' is not defined
+>>> books = Ninja.objects.filter(dojo=Dojo.objects.get(id=4))
+>>> print(books)
+<QuerySet [<Ninja: Ninja object (1)>, <Ninja: Ninja object (2)>, <Ninja: Ninja object (3)>]>
+>>> books = Ninja.objects.filter(dojo=Dojo.objects.last())
+>>> print(books)
+<QuerySet [<Ninja: Ninja object (7)>, <Ninja: Ninja object (8)>, <Ninja: Ninja object (9)>]>
+>>> books4=Ninja.objects.last().dojo
+>>> print(books4)
+Dojo object (6)
+>>>
