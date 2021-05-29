@@ -14,3 +14,12 @@ class Ninja(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+def result(form):
+    Dojo.objects.create(name=form["name"] , city = form["city"] , state= form["state"])
+
+    
+
+
+
+def result2(form):
+    Ninja.objects.create(first_name=form["first_name"] , last_name = form["last_name"] , dojo= Dojo.objects.get(id =form["select"] ))

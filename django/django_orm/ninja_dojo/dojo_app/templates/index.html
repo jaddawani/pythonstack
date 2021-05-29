@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+ <header> 
+     <div>
+         <h1>Add a dojo!</h1>
+         <form action="/result" method="POST">
+             {%csrf_token%}
+           <p>  Name <input type="text" name="name" ></p>
+           <p>  City <input type="text" name="city" ></p>
+           <p>  State <input type="text" name="state" ></p>
+           <input type ="hidden" name="forms" value="dojo">
+           <button>ADD</button>
+         </form>
+     </div>
+
+     <div><h1>Add a Ninja!</h1>
+         <form action="/result" method="POST">
+             {%csrf_token%}
+           <p>  first Name <input type="text" name="first_name" ></p>
+           <p>  Last name <input type="text" name="last_name" ></p>
+           <p>  dojo <select type="text" name="select" >
+               
+                   {% for i in all_dojo%}
+                   <option value="{{i.id}}">  {{i.name}} at {{i.city}} {{i.state}}</option>
+                   {% endfor %}
+               
+
+
+           </p>
+           <input type ="hidden" name="forms" value="ninja">
+           <button>ADD</button>
+         </form></div>
+ </header>
+ <hr>
+  {% for i in all_dojo %}
+ <p>{{i.name}} at {{i.city}} {{i.state}}</p>
+    {% for x in all_ninja %}
+    {% if i.id == x.dojo_id %}
+    <li>{{x.first_name}}</li>
+    {% endif %}
+  {% endfor %}
+  {% endfor %}
+</body>
+</html>

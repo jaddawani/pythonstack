@@ -1,4 +1,4 @@
-"""ninja_dojo URL Configuration
+"""BOOK_test URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.2/topics/http/urls/
@@ -19,5 +19,5 @@ from django.urls.conf import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include("dojo_app.urls"))
+    path('' , include("BOOK_app.urls")),
 ]
