@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Edit show </h1>
+    <form action="show/update/{{x.id}}" method="POST">
+        {%csrf_token%}
+        <input type="text" name="title" placeholder="Title" value="{{x.title}}">
+
+        <br>
+        <br>
+
+         <input type="text" name="network" placeholder="Network"  value="{{x.network}}"> 
+
+        <input type="date" name="release_date" placeholder="Realese Date"  value="{{x.release_date| date:'Y-m-d'}}"> 
+
+        <br>
+
+        <textarea name="description" id="" cols="30" rows="10" placeholder="Description"  > {{x.description}}</textarea>
+        <br>
+
+       <button>UPDATE</button>
+
+       {% if messages %}
+       <ul class="messages">    
+           {% for message in messages %}    
+               <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>    
+           {% endfor %}
+       </ul>
+       {% endif %}
+
+    </form>
+</body>
+</html>
