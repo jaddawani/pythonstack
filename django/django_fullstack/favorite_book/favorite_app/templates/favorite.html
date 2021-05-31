@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1">Welcome {{user.first_name}}</span>
+          <span class="navbar-brand mb-0 h1"> <a href="#">log off</a></span>
+          
+        </div>
+    </nav>
+
+    <br>
+      <br>
+
+      <div style="float: left;">
+      <h3>Add a favorite book</h3>
+      
+      <form action="add_book" method="POST">
+          {% csrf_token %}
+       title: <input type="text" name="title" id="">
+       <br>
+       <p>description:</p>  <textarea name="description" id="" cols="30" rows="10"></textarea>
+
+        <button type="submit" class="btn btn-primary btn-lg">ADD</button>
+        </form>
+    </div>
+
+    <div style="float: right;">
+        <h1>ALL BOOKS</h1>
+
+        {% for book in all_books%}
+       
+        <h3> <a href="/book/{{book.id}}">{{book.title}}</a></h3>
+        <h3>added by {{book.uploded_by.first_name}}</h3>
+        {% if request.session.id == book.uploded_by.id %}
+    <p> <em>This is one of your favorite books</em></p>
+    {% endif %}
+    {% if request.session.id != book.uploded_by.id %}
+    <p> <a href="/book/fav/{{book.id}}">  Add this to your favorite books</a></p>
+    {% endif %}
+
+
+        {% endfor %}
+
+    </div>
+        
+</body>
+</html>
